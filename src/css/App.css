@@ -1,25 +1,40 @@
 body 
 {
-	background-color: white;
+	background-image: linear-gradient(#99ffe6, #ffffb3, #99ffe6);
 }
 
 .App-title
 {
-	color: 404040;
+	color: #00664d;
 	font-family: Arial;
 	text-align: center; 
 }
 
 .Form
 {
-	color: 404040;
+	color: #00664d;
 	font-family: Arial;
 	text-align: center;
 }
 
 .ProfileDetails
 {
-	color: 404040;
+	color: #00664d;
 	font-family: Arial;
 	text-align: center;
+}
+
+.BarChart
+{
+	text-align: left;
+}
+
+.Search
+{
+	color: white;
+}
+
+.Button
+{
+	color: white;
 }

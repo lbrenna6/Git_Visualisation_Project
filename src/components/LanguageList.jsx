@@ -20,13 +20,13 @@ const LanguageList = (props) => {
                                 <div>{console.log(x = x + eachitem )}</div></div>)}
                 </div>
                 {console.log(x)}
-                <div className='App-header'>
+                <div className='BarChart'>
                     <h2>Languages</h2>
-                </div>
                 <div>
                     <BarChart data={x.split('')} size={[500, 500]} />
                     {x = ''}
 
+                </div>
                 </div>
             </div>
         )

@@ -1,6 +1,7 @@
 import React from 'react';const Form = (props) => {
   return (<form onSubmit={(event) => props.handleUserFormSubmit(event)}>
       <label>
+      <div>
         <p>Search:</p>
         <input name="username"
         type="text"
@@ -9,6 +10,7 @@ import React from 'react';const Form = (props) => {
         value={props.formData.username}
         onChange={props.handleFormChange}
       />
+      </div>
       </label>
       <div>
       <input
