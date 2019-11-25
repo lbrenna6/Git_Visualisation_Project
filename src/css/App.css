@@ -1,0 +1,25 @@
+body 
+{
+	background-color: white;
+}
+
+.App-title
+{
+	color: 404040;
+	font-family: Arial;
+	text-align: center; 
+}
+
+.Form
+{
+	color: 404040;
+	font-family: Arial;
+	text-align: center;
+}
+
+.ProfileDetails
+{
+	color: 404040;
+	font-family: Arial;
+	text-align: center;
+}

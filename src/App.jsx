@@ -3,21 +3,25 @@ import axios from 'axios';import Form from './components/Form.jsx';
 import SortedList from './components/SortedList.jsx';
 import ProfileDetails from './components/ProfileDetails.jsx';
 import LanguageList from './components/LanguageList.jsx';import lda from './lda';
+import "./css/App.css";
+
 class App extends Component {
   constructor() {
     super();
-    this.state = {
+    this.state = 
+    {
       gitun: 'No username',
       infoclean : '',
       info: '',
-      formData: {
+      formData: 
+      {
         username: '',
       },
       repitems: null,
       staritems: null,
       replanguagecount: {},
       keywords: null
-      }
+    }
     this.handleUserFormSubmit = this.handleUserFormSubmit.bind(this);
     this.handleFormChange= this.handleFormChange.bind(this);
   }
@@ -101,16 +105,19 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">GitHub Analytics</h1>
         </header>
-        <p className="App-intro">
-          Watch this space...
-        </p>
         <hr></hr>
+
+        <div className= "Form">
         <Form
           formData={this.state.formData}
           handleUserFormSubmit={this.handleUserFormSubmit}
           handleFormChange={this.handleFormChange}
         />
+        </div>
+
         <hr></hr>
+
+        <div className = "ProfileDetails">
         Profile Details:
         <ProfileDetails infoclean={this.state.infoclean}/>
         <hr></hr>
@@ -123,6 +130,8 @@ class App extends Component {
         Own Repos Language Count:
         <LanguageList langslist={this.state.replanguagecount}/>
          Keywords:  {this.state.keywords}
+         </div>
+         
       </div>
     );
   }
