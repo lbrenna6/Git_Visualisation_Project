@@ -20,7 +20,6 @@ class App extends Component {
       repitems: null,
       staritems: null,
       replanguagecount: {},
-      keywords: null
     }
     this.handleUserFormSubmit = this.handleUserFormSubmit.bind(this);
     this.handleFormChange= this.handleFormChange.bind(this);
@@ -99,13 +98,17 @@ class App extends Component {
     this.setState(obj);
   };
 
-  render() {
+
+/*header, profile details section*/
+  render() 
+  {
     return (
+      
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">GitHub Analytics</h1>
         </header>
-        <hr></hr>
+        <hr></hr>                                              
 
         <div className= "Form">
         <Form
@@ -115,21 +118,19 @@ class App extends Component {
         />
         </div>
 
-        <hr></hr>
 
         <div className = "ProfileDetails">
-        Profile Details:
-        <ProfileDetails infoclean={this.state.infoclean}/>
-        <hr></hr>
-        Own Repositories:
-        <SortedList repitems={this.state.repitems}/>
-        <hr></hr>
-        Starred Repositories:
-        <SortedList repitems={this.state.staritems}/>
-        <hr></hr>
-        Own Repos Language Count:
-        <LanguageList langslist={this.state.replanguagecount}/>
-         Keywords:  {this.state.keywords}
+          Profile Details:
+          <ProfileDetails infoclean={this.state.infoclean}/>
+          <hr></hr>
+          Own Repositories:
+          <SortedList repitems={this.state.repitems}/>
+          <hr></hr>
+          Starred Repositories:
+          <SortedList repitems={this.state.staritems}/>
+          <hr></hr>
+          Own Repos Language Count:
+          <LanguageList langslist={this.state.replanguagecount}/>
          </div>
          
       </div>

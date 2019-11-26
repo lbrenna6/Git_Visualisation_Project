@@ -15,6 +15,7 @@ class BarChart extends Component {
     componentDidUpdate() {
         this.createBarChart()
     }
+
     createBarChart() {
         const node = this.node
         const dataMax = max(this.props.data)
@@ -39,21 +40,18 @@ class BarChart extends Component {
             .selectAll('rect')
             .data(this.props.data)
             .style('fill', '#00664d')
-            .attr('x', (d, i) => i * 25)
+            .attr('x', (d, i) => i * 50)                        //how much space is between the bars in the chart
             .attr('y', d => this.props.size[1]- yScale(d))
             .attr('height', d => yScale(d))
-            .attr('width', 25)
-            .attr('stroke','black')
+            .attr('width', 50)                                  //width of the bars themselves
+            .attr('stroke','white')
             
     }
+
     render() {
         return <svg ref={node => this.node = node}
             width={500} height={500}>
         </svg>
-
-
-
-
     }
 }
 export default BarChart
