@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';import Form from './components/Form.jsx';
 import SortedList from './components/SortedList.jsx';
 import ProfileDetails from './components/ProfileDetails.jsx';
-import LanguageList from './components/LanguageList.jsx';import lda from './lda';
-import "./css/App.css";
+import LanguageList from './components/LanguageList.jsx';
+import lda from './lda';
+import "./components/css/App.css";
+
 
 class App extends Component {
   constructor() {
@@ -54,8 +56,7 @@ class App extends Component {
       {
           dictrlc[itemsWithFalseForks[i]['language']] = -~ dictrlc[itemsWithFalseForks[i]['language']]
       }
-      this.setState
-      ({
+      this.setState({
         repitems: sortedItems.slice(0,10),
         replanguagecount: dictrlc,
       })})
@@ -99,40 +100,38 @@ class App extends Component {
   };
 
 
+
+
 /*header, profile details section*/
   render() 
   {
-    return (
-      
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">GitHub Analytics</h1>
-        </header>
-        <hr></hr>                                              
+    return (      
+        <div className="App">
 
-        <div className= "Form">
-        <Form
-          formData={this.state.formData}
-          handleUserFormSubmit={this.handleUserFormSubmit}
-          handleFormChange={this.handleFormChange}
-        />
-        </div>
+          <header className="App-header">
+            <h1 className="App-title">GitHub Analytics</h1>
+          </header>
+          <hr></hr>                                            
+
+          <div className= "Form">
+              <Form
+                formData={this.state.formData}
+                handleUserFormSubmit={this.handleUserFormSubmit}
+                handleFormChange={this.handleFormChange}
+              />
+          </div>
 
 
-        <div className = "ProfileDetails">
-          Profile Details:
-          <ProfileDetails infoclean={this.state.infoclean}/>
-          <hr></hr>
-          Own Repositories:
-          <SortedList repitems={this.state.repitems}/>
-          <hr></hr>
-          Starred Repositories:
-          <SortedList repitems={this.state.staritems}/>
-          <hr></hr>
-          Own Repos Language Count:
-          <LanguageList langslist={this.state.replanguagecount}/>
-         </div>
-         
+          <div className = "ProfileDetails">
+              <h2> Profile Details:</h2>
+              <ProfileDetails infoclean={this.state.infoclean}/>
+              <hr></hr>
+              Own Repositories:
+              <SortedList repitems={this.state.repitems}/>
+              <hr></hr>
+              Languages used in users' repositories:
+              <LanguageList langslist={this.state.replanguagecount}/>
+          </div>  
       </div>
     );
   }

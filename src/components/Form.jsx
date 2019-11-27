@@ -4,7 +4,7 @@ import React from 'react';const Form = (props) => {
         <p>Search Me:</p>
         <input name="username"
         type="text"
-        placeholder="GitHub username..."
+        placeholder="Enter username..."
         required
         value={props.formData.username}
         onChange={props.handleFormChange}
@@ -14,7 +14,7 @@ import React from 'react';const Form = (props) => {
    {/*div this section to put search bar under the place you type a user name*/}
       <input
         type="submit"
-        value="Submit"
+        value="Go"
       />
    
 

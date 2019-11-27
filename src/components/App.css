@@ -1,0 +1,73 @@
+@font-face {
+	font-family: "BebasNeue-Regular";
+	src: url(C:\Users\brenn\Git_Visualisation_Project\src\fonts\BebasNeue-Regular.otf);
+}
+
+@font-face {
+	font-family: "Montserrat-Regular";
+	src: url(C:\Users\brenn\Git_Visualisation_Project\src\fonts\Montserrat-Regular.ttf);
+}
+
+body
+{
+	background-image: linear-gradient(#99ffe6, #ffffb3, #99ffe6);
+}
+
+h1
+{
+	color: #00664d;
+	font-family: 'BebasNeue-Regular';
+	text-align: left; 
+	font-size: 80px;
+}
+
+h2
+{
+	color: #00664d;
+	font-family: 'BebasNeue-Regular';
+	text-align: center; 
+	font-size: 40px;
+}
+
+
+.Form
+{
+	color: #00664d;
+	font-family: 'Montserrat-Regular';
+	text-align: right;
+	
+	position:absolute;
+    left:65%;
+    top: 8%;
+    width: 30%;
+
+    color:black;
+}
+
+.ProfileDetails
+{
+	color: #00664d;
+	font-family: 'Montserrat-Regular';
+	text-align: center;
+}
+
+.BarChart
+{
+	text-align: left;
+}
+
+.Search
+{
+	color: white;
+}
+
+.Button
+{
+	color: white;
+}
+
+.language_title
+{
+		text-align: left;
+}
+

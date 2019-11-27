@@ -1,37 +1,53 @@
 import React from 'react';
 import BarChart from './BarChart';
-let x = ''
-let langs = []
+import PieChart from './PieChart.jsx';
+import Plot from 'react-plotly.js';
+
+
+let i = '';
+let languages = '';
+
 const LanguageList = (props) => {
     if (props.langslist) {
-        {
-            var totalcount = Object.entries(props.langslist).map(([key, eachitem]) =>
-                (eachitem.count)).reduce((pv, cv) => pv + cv, 0)
+        { var total =
+            Object.entries(props.langslist).map(([key, value]) =>
+                (value)).reduce((pv, cv) => pv + cv, 0)
         }
         return (
-            <div>
-                <div>
-                    {
-                        Object.entries(props.langslist).map(([key, eachitem]) =>
-                            <div>
-                                <div key={key}>
-                                   {key}-{eachitem}
-              </div>
-                                <div>{console.log(x = x + eachitem )}</div></div>)}
-                </div>
-                {console.log(x)}
-                <div className='BarChart'>
-                    <h2>Languages</h2>
-                <div>
-                    <BarChart data={x.split('')} size={[500, 500]} />
-                    {x = ''}
+            <ul>
+                {Object.entries(props.langslist).map(([key, value]) =>
+                    <li key={key}>
+                        {key} - {Math.round(100*value/total)}%
+                        {console.log(i = i + value)}
+                        {console.log(languages=languages+key+",")}
 
+                    </li>
+
+                )}
+                <div className='Chart'>
+                    <div>
+                        {(i != '') ?
+                            <div>
+                            <h4>Chart Representation of Language Count</h4>
+
+                            <div>
+<div>
+                                <PieChart repoSize={i.split('')} repoNames={languages.split(',')} />
+</div>
+                                    <BarChart repoSize={i.split('')} repoNames={languages.split(',')} />
+                                {i = ''}
+                                {languages = ''}
+                                </div>
+                                </div>:
+                            <div></div>
+                        }
                 </div>
-                </div>
-            </div>
+         
+
+                    </div>
+
+            </ul>
         )
     } else { return null; }
-
 };
-
 export default LanguageList;
