@@ -12,7 +12,7 @@ const PieChart = (props) => {
                 type: 'pie'
             }
         ]}
-            layout={{ width: 700, height: 400 }}
+            layout={{ width: 700, height: 400,title: 'Languages Pie Chart', paper_bgcolor :'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)' }}
         />
     );
 }

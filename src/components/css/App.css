@@ -29,6 +29,14 @@ h2
 	font-size: 40px;
 }
 
+h3
+{
+	color: #00664d;
+	font-family: 'BebasNeue-Regular';
+	text-align: center; 
+	font-size: 30px;
+}
+
 
 .Form
 {
@@ -38,10 +46,22 @@ h2
 	
 	position:absolute;
     left:65%;
-    top: 8%;
+    top: 15%;
     width: 30%;
 
     color:black;
+}
+
+input[type = "submit"]
+{
+	color:white;
+	background-color: #00664d;
+	border-color: #00664d;	
+}
+
+input[type = "text"]
+{
+
 }
 
 .ProfileDetails

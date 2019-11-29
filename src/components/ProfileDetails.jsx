@@ -20,8 +20,11 @@ const ProfileDetails = (props) => {
         </div>
 
         <div>
-          {props.infoclean.name ? <div><p>Name: {props.infoclean.name}</p></div> : null }
-        </div>
+          {props.infoclean.name ? 
+          <div>
+            <p>Name: {props.infoclean.name}</p>
+          </div> : null }
+          </div>
 
         <div>
           {props.infoclean.bio ? <div><p>Bio: {props.infoclean.bio}</p></div> : null }

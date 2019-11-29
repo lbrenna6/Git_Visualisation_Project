@@ -109,7 +109,7 @@ class App extends Component {
         <div className="App">
 
           <header className="App-header">
-            <h1 className="App-title">GitHub Analytics</h1>
+            <h1 class="test">GitHub Analytics</h1>
           </header>
           <hr></hr>                                            
 
@@ -126,10 +126,9 @@ class App extends Component {
               <h2> Profile Details:</h2>
               <ProfileDetails infoclean={this.state.infoclean}/>
               <hr></hr>
-              Own Repositories:
+              <h4>Own Repositories:</h4>
               <SortedList repitems={this.state.repitems}/>
               <hr></hr>
-              Languages used in users' repositories:
               <LanguageList langslist={this.state.replanguagecount}/>
           </div>  
       </div>

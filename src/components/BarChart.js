@@ -6,9 +6,9 @@ const BarChart = (props) => {
         <Plot
             data={[
 
-                { type: 'bar', x: props.repoNames, y: props.repoSize },
+                { type: 'bar', x: props.repoNames, y: props.repoSize,style:{color:'red'} },
             ]}
-            layout={{ width: 500, height: 240, title: 'Languages', paper_bgcolor :'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)' }}
+            layout={{ width: 500, height: 240, title: 'Languages Bar Chart', paper_bgcolor :'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)' }}
 
         />
     );

@@ -13,38 +13,39 @@ const LanguageList = (props) => {
             Object.entries(props.langslist).map(([key, value]) =>
                 (value)).reduce((pv, cv) => pv + cv, 0)
         }
-        return (
-            <ul>
-                {Object.entries(props.langslist).map(([key, value]) =>
+
+//Put this in return for the figures to appear on screen, but just want it to calculate them and use for charts so took out of //return.
+        Object.entries(props.langslist).map(([key, value]) =>
                     <li key={key}>
                         {key} - {Math.round(100*value/total)}%
                         {console.log(i = i + value)}
                         {console.log(languages=languages+key+",")}
 
                     </li>
+                )
 
-                )}
+        return (
+            <ul>
                 <div className='Chart'>
                     <div>
                         {(i != '') ?
                             <div>
-                            <h4>Chart Representation of Language Count</h4>
+                                <h4>What languages does this user use?</h4>
 
-                            <div>
-<div>
-                                <PieChart repoSize={i.split('')} repoNames={languages.split(',')} />
-</div>
+                                    <div>
+                                         <div>
+                                             <PieChart repoSize={i.split('')} repoNames={languages.split(',')} />
+                                        </div>
+                                   
                                     <BarChart repoSize={i.split('')} repoNames={languages.split(',')} />
                                 {i = ''}
                                 {languages = ''}
-                                </div>
-                                </div>:
+                                    </div>
+                            </div>:
                             <div></div>
                         }
-                </div>
-         
-
                     </div>
+                </div>
 
             </ul>
         )
